@@ -1,16 +1,33 @@
 ---
+import AppLayout from "../layouts/AppLayout.astro";
+import Hero from "../components/Hero.astro";
+import CardInfo from "../components/CardInfo.astro";
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<AppLayout title="Home">
+	<Hero 
+	image="/images/hero-01.avif"
+	legend="El Barcelona ha cosechado un impresionante historial de éxitos a lo largo de los años, ganando numerosos títulos nacionales e internacionales. Ha dominado la liga española, LaLiga, en múltiples ocasiones y ha logrado un notable éxito en la UEFA Champions League, ganando múltiples títulos."
+	/>
+	<div class="news gap-3 text-center grid md:grid-cols-2 lg:grid-cols-3 w-full">
+		<CardInfo 
+		image="/images/cardinfo-1.png"
+		title="FC Barcelona vs FK Shajtar Donetsk"
+		legend="Barcelona se impuso 2 a 1 al Shakhtar Donetsk de Ucrania con goles de Ferrán Torres y Fermín López y con tres victorias en tres partidos disputados, el equipo de Xavi Hernández quedó a un paso de la clasificación a octavos de final de la Champions League."
+		date="25 - 10 - 2023"
+		/>
+		<CardInfo 
+		image="/images/cardinfo-2.webp"
+		title="FC Barcelona vs Real Madrid"
+		legend="El enfrentamiento entre estos dos equipos es conocido como El Clásico y es uno de los partidos más esperados y seguidos en el fútbol mundial. Esta rivalidad histórica añade un nivel adicional de pasión y emoción a cada encuentro entre el Barcelona y el Real Madrid, lo que lo convierte en uno de los eventos deportivos más destacados en el calendario futbolístico."
+		date="28 - 10 - 2023"
+		/>
+		<CardInfo 
+		image="/images/cardinfo-3.jpg"
+		title="FC Barcelona vs athletic bilbao"
+		legend="El enfrentamiento entre el FC Barcelona y el Athletic Bilbao a menudo es un evento destacado en la liga española y en la Copa del Rey debido a la rivalidad y la calidad de ambos equipos."
+		date="22 - 10 - 2023"
+		/>
+	</div>
+</AppLayout>

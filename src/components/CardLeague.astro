@@ -1,0 +1,15 @@
+---
+const {shortName, logo, flag, name, year} = Astro.props.product;
+---
+
+<article class="border rounded-lg bg-white flex justify-center items-center flex-col h-full p-3 text-center">
+  <h3 class="text-2xl font-semibold text-sky-900 text-center">{shortName}</h3>
+  <img class="mt-9 h-60 object-cover" src={logo} alt="Foto">
+  <p class="p-2 mt-2 text-red-500 font-semibold">
+    {flag}
+  </p>
+  <p class="font-light flex justify-between items-center p-2 mt-2 text-blue">
+    {name}
+  </p>
+  <p  class="font-light flex justify-between items-center p-2 mt-2 text-blue">{year}</p>
+</article>

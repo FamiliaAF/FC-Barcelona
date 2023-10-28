@@ -1,0 +1,10 @@
+---
+const {image,title,legend,date} = Astro.props;
+---
+
+<div class="container mt-4 w-80 border rounded bg-red-500 p-4">
+  <img class="rounded" src={image} alt="">
+  <h3 class="text-white font-medium">{title}</h3>
+  <p class="text-white ">{legend}</p>
+  <p class="text-white text-center">{date}</p>
+</div>
